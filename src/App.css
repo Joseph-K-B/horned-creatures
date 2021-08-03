@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+html{
+  background-color: slategray;
+}
+select{
+  height: fit-content;
+}
+div{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: space-around;
+  align-items:center;
+  margin: 50px;
+  padding: 20px;
+  border: 20px;
+}

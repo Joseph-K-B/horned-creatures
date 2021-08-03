@@ -8,7 +8,7 @@ class ImageItem extends Component {
                 {this.props.image.title}
                 <img
                 alt={this.props.image.title}
-                width='75'
+                width='100'
                 src={this.props.image.url} />
             </p>
         );
