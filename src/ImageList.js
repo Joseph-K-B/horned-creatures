@@ -6,7 +6,7 @@ class ImageList extends Component {
     render() {
         return (
             <>
-            {this.props.words.map((item) => {
+            {this.props.horns.map((item) => {
                 return <ImageItem key={item.title} image={item} />
             })}
             </>

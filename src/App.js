@@ -9,7 +9,7 @@ import ImageList from './ImageList.js'
 
 class App extends Component{
   state = {
-    type: 'All',
+    keyword: 'All',
   };
   stateChange = (e) => {
     this.setState({ keyword: e.target.value });
@@ -38,7 +38,7 @@ render() {
         
       </select>
 
-      < ImageList words={filterHorns} />
+      < ImageList horns={filterHorns} />
     </div>
     );
   }
