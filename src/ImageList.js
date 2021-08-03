@@ -7,7 +7,7 @@ class ImageList extends Component {
         return (
             <>
             {this.props.horns.map((item) => {
-                return <ImageItem key={item.title} image={item} />
+                return <ImageItem key={item.id} image={item} />
             })}
             </>
         );

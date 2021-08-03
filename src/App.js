@@ -16,13 +16,13 @@ class App extends Component{
   };
 render() {
   const filterHorns = images.filter(
-    (image) => this.state.keyword === 'All' || image.title === this.state.keyword
+    (image) => this.state.keyword === 'All' || image.keyword === this.state.keyword
   );
   
   return (
     <div className="App">
       <h1>Horned Beasts</h1>
-      <select selection={this.stateChange}>
+      <select onChange={this.stateChange}>
         <option value='All'>All</option>
         <option value='narwhal'>narwhal</option>
         <option value='rhino'>rhino</option>
