@@ -16,7 +16,7 @@ class App extends Component{
   };
 render() {
   const filterHorns = images.filter(
-    (images) => this.state.keyword === 'All' || images.title === this.state.keyword
+    (image) => this.state.keyword === 'All' || image.title === this.state.keyword
   );
   
   return (
