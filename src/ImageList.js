@@ -7,9 +7,8 @@ class ImageList extends Component {
         const { images } = this.props
         return (
             <>
-            {images.map((item) => {
-                const{ keyword, url} = item;  
-                return <ImageItem key={keyword} image={url} />
+            {images.map((item) => { 
+                return <ImageItem key={item.url} keyword={item.keyword} name={item.title} url={item.url} />
             })}
             </>
         );

@@ -10,23 +10,24 @@ class App extends Component{
     keyword: 'All',
     horns: 'All'
   };
-  choices = ['All', 'narwhal', 'rhino', 'unicorn', 'unilego', 'triceratops', 'markhor', 'mouflon', 'addax', 'chameleon', 'lizard', 'dragon']
-  hornChoices = ['All' , 1, 2, 3, 100]
-  
-  
   keywordChange = (e) => {
-  this.setState({ keyword: e.target.value });
+    this.setState({ keyword: e.target.value });
   };
   hornChange = (e) => {
-    const numHorns = Number(e.target.value)
+    const numHorns = e.target.value
     this.setState({horns: numHorns});
   }
-render() {
+  
+  
+  render() {
+  const choices = ['All', 'narwhal', 'rhino', 'unicorn', 'unilego', 'triceratops', 'markhor', 'mouflon', 'addax', 'chameleon', 'lizard', 'dragon']
+  const  hornChoices = ['All' , 1, 2, 3, 100];
+  
   const filterKeys = images.filter(
     (image) => this.state.keyword === 'All' || image.keyword === this.state.keyword
   );
   const filterHorns = filterKeys.filter(
-    (image) => this.state.horns === 'All' || image.horns === this.state.horns
+    (image) => this.state.horns === 'All' || image.horns === Number(this.state.horns)
   )
   
   return (
@@ -34,13 +35,13 @@ render() {
       <h1>Horned Beasts</h1>
       <Dropdown
         label='keyword'
-        choices={this.choices}
-        changE={this.keywordChange}
+        choices={choices}
+        changeEvent={this.keywordChange}
         />
         <Dropdown
         label='horns'
-        choices={this.hornChoices}
-        changeE={this.hornChange}
+        choices={hornChoices}
+        changeEvent={this.hornChange}
         />
         <ImageList images={filterHorns} />
         </div>
