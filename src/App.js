@@ -10,13 +10,17 @@ class App extends Component{
     keyword: 'All',
     horns: 'All'
   };
-  choices = ['All', ]
-  hornChoices = ['All']
+  choices = ['All', 'narwhal', 'rhino', 'unicorn', 'unilego', 'triceratops', 'markhor', 'mouflon', 'addax', 'chameleon', 'lizard', 'dragon']
+  hornChoices = ['All' , 1, 2, 3, 100]
   
   
   keywordChange = (e) => {
   this.setState({ keyword: e.target.value });
   };
+  hornChange = (e) => {
+    const numHorns = Number(e.target.value)
+    this.setState({horns: numHorns});
+  }
 render() {
   const filterKeys = images.filter(
     (image) => this.state.keyword === 'All' || image.keyword === this.state.keyword
@@ -31,14 +35,14 @@ render() {
       <Dropdown
         label='keyword'
         choices={this.choices}
-        changE={this.}
+        changE={this.keywordChange}
         />
         <Dropdown
         label='horns'
-        choices={this.}
-        keywordChange={this.setState}
+        choices={this.hornChoices}
+        changeE={this.hornChange}
         />
-        <ImageList images={filterKeys} />
+        <ImageList images={filterHorns} />
         </div>
         );
       }

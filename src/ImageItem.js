@@ -3,13 +3,14 @@ import React, { Component } from 'react';
 class ImageItem extends Component {
     state = {};
     render () {
+        const { title , url } = this.props;
         return (
             <p>
-                {this.props.image.title}
+                { title }
                 <img
-                alt={this.props.image.title}
+                alt={ title}
                 width='100'
-                src={this.props.image.url} />
+                src={ url } />
             </p>
         );
     }

@@ -4,10 +4,12 @@ import ImageItem from './ImageItem.js'
 
 class ImageList extends Component {
     render() {
+        const { images } = this.props
         return (
             <>
-            {this.props.horns.map((item) => {
-                return <ImageItem key={item.id} image={item} />
+            {images.map((item) => {
+                const{ keyword, url} = item;  
+                return <ImageItem key={keyword} image={url} />
             })}
             </>
         );
