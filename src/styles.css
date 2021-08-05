@@ -1,0 +1,33 @@
+html{
+    background-color: rgb(84, 98, 110);
+  }
+  select{
+    height: fit-content;
+  }
+  h1{
+    font-size: 3.5rem;
+    font-family: cursive, sans-serif;
+    color: rgb(38, 190, 127);
+  }
+  .image-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: space-around;
+    align-items:center;
+    margin: 50px;
+    padding: 20px;
+    border: 20px;
+  }
+  img{
+    border: black solid 4px;
+    border-radius: 30%;
+  }
+  select{
+    background-color: rgb(38, 190, 127);
+    font-size: 1.2rem;
+    font-family: cursive, sans-serif;
+    height: 2rem;
+    width: 6rem;
+    border-radius: 20%;
+  }

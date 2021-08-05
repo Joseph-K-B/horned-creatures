@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './App.css'
+import './styles.css'
 import images from "./data.js";
 import Dropdown from "./Dropdown";
 import ImageList from './ImageList.js'
@@ -31,8 +32,9 @@ class App extends Component{
   )
   
   return (
-    <div className="App">
+    <section className="App">
       <h1>Horned Beasts</h1>
+      
       <Dropdown
         label='keyword'
         choices={choices}
@@ -43,8 +45,10 @@ class App extends Component{
         choices={hornChoices}
         changeEvent={this.hornChange}
         />
+        <div className='image-div'>
         <ImageList images={filterHorns} />
         </div>
+        </section>
         );
       }
     }
