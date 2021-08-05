@@ -36,12 +36,12 @@ class App extends Component{
       <h1>Horned Beasts</h1>
       
       <Dropdown
-        label='keyword'
+        label='Beast:'
         choices={choices}
         changeEvent={this.keywordChange}
         />
         <Dropdown
-        label='horns'
+        label='Number of Horns:'
         choices={hornChoices}
         changeEvent={this.hornChange}
         />

@@ -9,6 +9,9 @@ html{
     font-family: cursive, sans-serif;
     color: rgb(38, 190, 127);
   }
+  label{
+    
+  }
   .image-div{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
